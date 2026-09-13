@@ -17,7 +17,7 @@ Convert text between different letter cases quickly and easily.
 - Shopping List
 Create and manage shopping lists and save them as PDF files.
 ---
-#### Any of your data entered in this never leaves your device/browser tab.
+- Any of your data entered in this never leaves your device/browser tab.
 ---
 ## Built with
 
