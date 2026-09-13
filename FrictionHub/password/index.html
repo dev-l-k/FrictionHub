@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href = "../index.html" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <div class="time" id="time"></div>
+    </header>
+    <main class="app-page">
+        <a href="../index.html" class="back-btn">Back to Home</a>
+        <div class="app-header">
+            <h1>Password Generator</h1>
+            <p>Create a strong random password in seconds</p>
+
+        </div>
+        <div class="card">
+            <div class="app-group">
+                <label>Page/App name</label>
+                <input type="text" id="appName" placeholder="Example: Github">
+            </div>
+            <div class="app-group">
+                <label>Password</label>
+                <div class="password-row">
+                    <input type="text" id="password" placeholder="Your Can Copy Your Password From Here...">
+                    <button class="btn-primary" onclick="copyPassword()">Copy</button>
+
+                </div>
+            </div>
+            <div class="app-group">
+                <label>Length: <span id="lengthValue">16</span></label>
+                <input type="range" id="length" min="6" max="24" value="16" oninput="updateLength()">
+
+            </div>
+            <div class="app-group">
+                <label>
+                    <input type="checkbox" id="uppercase" checked> Uppercase Letters
+                </label>
+                <label>
+                    <input type="checkbox" id="lowercase" checked> Lowercase letters
+                </label>
+                <label>
+                    <input type="checkbox" id="numbers" checked> Numbers
+                </label>
+                <label>
+                    <input type="checkbox" id="symbols" checked> symbols
+                </label>
+            </div>
+            <button class="btn-primary" onclick="generatePassword()">
+                Generate Password
+            </button>
+            <button class="btn-primary" onclick="savePassword()" style="margin-left:15px;">
+                Save Password
+            </button>
+        </div>
+        <h2 class="section-title" style="margin-top:10px;">Saved passwords</h2>
+        <div id="savedPasswords" class="list"></div>
+        <div id="empty">No Saved Passwords yet</div>
+        
+    </main>
+    <footer>
+        Password Generator - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

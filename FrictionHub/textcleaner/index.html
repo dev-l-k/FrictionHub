@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Cleaner</title>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../index.html" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <a href="../index.html" class="back-btn"> Back</a>
+
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>Text Cleaner</h1>
+            <p class="muted">
+                Quickly clean and format messy text
+            </p>
+            <div class="app-group">
+                <label>Text</label>
+                <textarea id="text" placeholder="Paste your text here"></textarea>
+
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="spaces" checked> Remove extra spaces
+                </label>
+                <label>
+                    <input type="checkbox" id="emptyLines"> Remove empty spaces
+                </label>
+                <label>
+                    <input type="checkbox" id="trimlines()" checked> Trim spaces from each line
+                </label>
+                <label>
+                    <input type="checkbox" id="duplicateLines"> Remove duplicate lines
+                </label>
+                <label>
+                    <input type="checkbox" id="lineBreaks"> Remove line breaks
+                </label>
+            </div>
+            <div class="button-row">
+                <button class="btn-primary" onclick="cleanText()">Clean Text</button>
+                <button class="btn-small" onclick="copyText()">Copy</button>
+                <button class="btn-danger btn-small" onclick="clearText()">Clear</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Text Cleaner - FrictionHub</p>
+    </footer>
+</body>
+</html>

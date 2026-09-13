@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CopyBoard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="../index.html" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <div class ="time" id="time"></div>
+    </header>
+    <main class="app-page">
+        <a href="../index.html" class="back-btn">
+            Back to Home
+        </a>
+        <section class="app-header">
+            <h1>CopyBoard</h1>
+            <p>
+                Save frequently used text and copy it whenever you need it.
+            </p>
+        </section>
+        <section class="card">
+            <h3>Add New Item</h3>
+            <div class="app-group">
+                <label for="title">Title</label>
+                <input id="title" type="text" placeholder="Enter a title">
+
+            </div>
+            <div class="app-group">
+                <label for="content">Text</label>
+                <textarea id="content" placeholder="Type anything...."></textarea>
+            </div>
+            <div style="margin-top: 18px;">
+                <button class="btn-primary" onclick="saveNote()">Save Text</button>
+
+            </div>
+        </section>
+        <div style="height:30px;"></div>
+        <div class="search-box">
+            <input id="search" type="text" placeholder="Search Saved Items...">
+        </div>
+        <h2 class="section-title">Saved Items</h2>
+        <div class="list" id="board"></div>
+        <div class="empty" id="empty">
+            <h3>No Saved Items</h3>
+            <br>
+            <p>
+                Add frequently used text above and access it any time.
+            </p>
+        </div>
+    </main>
+    <footer>
+        CopyBoard - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
