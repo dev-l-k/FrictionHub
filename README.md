@@ -16,6 +16,18 @@ Clean up messy text by removing unnecessary spaces and fixing unwanted line brea
 Convert text between different letter cases quickly and easily.
 - Shopping List
 Create and manage shopping lists and save them as PDF files.
+
+## Problem solved
+- CopyBoard
+Frequently used text such as email addresses, links, messages, prompts, or code snippets often needs to be typed or searched for repeatedly.
+- Password Generator 
+Creating secure and unique passwords manually can be difficult and time-consuming.
+- Text Cleaner
+Text copied from websites, PDFs, documents, or other sources can contain unnecessary spaces, extra line breaks, and inconsistent formatting.
+- Case converter 
+Manually changing text between uppercase, lowercase, title case, or other formats is repetitive and inconvenient.
+- Shopping List
+Remembering everything needed during shopping can be difficult, and paper lists can be easily lost.
 ---
 - Any of your data entered in this never leaves your device/browser tab.
 ---
