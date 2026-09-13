@@ -83,3 +83,11 @@ Multiple     spaces      should      become      single      spaces.
 
 Thank you!    `;
 }
+
+function updateTime(){
+    const clock = document.getElementById('time');
+    const time = new Date().toLocaleTimeString();
+    clock.textContent = time;
+}
+updateTime();
+setInterval(updateTime,1000);
