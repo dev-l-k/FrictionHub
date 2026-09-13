@@ -319,3 +319,41 @@ textarea{
     gap:10px;
     flex-wrap: wrap;
 }
+
+.shopping-input{
+    display:flex;
+    gap:10px;
+}
+.shopping-input input:first-child{
+    flex:1;
+}
+.quatity{
+    width:100%;
+}
+.shopping-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.item-name{
+    flex:1;
+}
+.brought{
+    text-decoration: line-through;
+    color:#a8a8b8;
+
+}
+.bottom-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+@media (max-width:500px){
+    .shopping-input{
+        flex-direction: column;
+    }
+    .quatity{
+        width:auto;
+    }
+}

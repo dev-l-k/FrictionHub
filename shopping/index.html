@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        @media print {
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .topbar,
+    footer,
+    .shopping-input,
+    .bottom-buttons,
+    .muted,
+    .task-count,
+    .empty {
+        display: none !important;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card {
+        border: none;
+        box-shadow: none;
+        background: white;
+        padding: 0;
+    }
+
+    .card h1 {
+        color: black;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .list-item {
+        background: white;
+        color: black;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+        padding: 12px 0;
+        page-break-inside: avoid;
+    }
+
+    .shopping-item input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .item-name {
+        color: black;
+    }
+
+    .bought {
+        color: #777;
+        text-decoration: line-through;
+    }
+
+    .shopping-item button {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../index.html" class="logo">
+            Friction<span>Hub</span>
+            
+        </a>
+        <div class="time" id="time"></div>
+    </header>
+    <main class="container">
+        <a href="../index.html" class="back-btn">Back</a>
+        <div class="card">
+            <h1>Shopping List</h1>
+            <p class="muted">
+                Add itms to your list and save as pdf
+            </p>
+            <div class="shopping-input">
+                <input type="text" id="itemInput" placeholder="Item name" onkeydown="checkEnter(event)">
+                <input type="text" id="quantityInput" class="quantity" placeholder="Quantity" onkeydown="checkEnter(event)">
+                <button class="btn-primary" onclick="addItem()">Add</button>
+
+
+            </div>
+            <p class="task-count" id="itemCount">
+                0 items
+            </p>
+            <div class="list" id="shoppingList"></div>
+            <div class="empty" id="empty">Your shopping list is empty</div>
+            <div class="bottom-buttons">
+                <button class="btn-primary" onclick="clearBrought()">Clear Brought</button>
+                <button class="btn-danger btn-small" onclick="clearAll()">Clear All</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Shopping List - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
