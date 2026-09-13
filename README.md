@@ -1,6 +1,5 @@
 # FrictionHub
----
-![Image](assets/1.jpg)
+
 ---
 FrictionHub is a small collection of Quality of Life improving miniweb tools made with html css and js only.
 
