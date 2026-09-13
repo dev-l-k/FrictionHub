@@ -63,3 +63,23 @@ function copyText(){
 function clearText(){
     text.value="";
 }
+function loadSample(){
+    text.value=`   Hello    everyone!    This is a   sample   text.   
+
+This line has    extra spaces.
+
+
+Here is another line with spaces     everywhere.
+
+   This line has spaces at the beginning and end.   
+
+   
+   
+We are testing the TEXT CLEANER tool!
+
+
+Multiple     spaces      should      become      single      spaces.
+
+
+Thank you!    `;
+}
