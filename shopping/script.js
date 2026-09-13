@@ -1,16 +1,16 @@
 let items = JSON.parse(localStorage.getItem('shoppingList')) || [];
 const itemInput = document.getElementById("itemInput");
-const quantityInput = document.getElementById("quatityInput");
+const quantityInput = document.getElementById("quantityInput");
 const shoppingList = document.getElementById("shoppingList");
-const empty = document.getElementById(empty);
+const empty = document.getElementById("empty");
 const itemCount = document.getElementById("itemCount");
 
 function saveItems(){
     localStorage.setItem("shoppingList",JSON.stringify(items));
 }
 function addItem(){
-    let name = itemInput.ariaValueMax.trim();
-    let quantity = quatityInput.value.trim()||"1";
+    let name = itemInput.value.trim();
+    let quantity = quantityInput.value.trim()||"1";
     if (name==="") return;
     items.unshift({
         id:Date.now(),
@@ -37,13 +37,13 @@ function showItems(){
         <div class="list-item shopping-item">
         <input type="checkbox" ${item.bought?"checked":""} onchange="toggleItem(${item.id})">
         <span class = "item-name ${item.bought?"bought":""}">${item.name} × ${item.quatity} </span>
-        <button class = "btn-danger btn-small" onclick="deleteItem(${item.id}">Delete</button>
+        <button class = "btn-danger btn-small" onclick="deleteItem(${item.id})">Delete</button>
         </div>
 
         `;
     }
     let bought = items.filter(item => item.bought).length;
-    itemCount.textContent`${items.length} items • ${bought}`;
+    itemCount.textContent = `${items.length} items • ${bought}`;
 }
 function toggleItem(id){
     let item = items.find(item=>item.id === id);
