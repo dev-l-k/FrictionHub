@@ -320,40 +320,35 @@ textarea{
     flex-wrap: wrap;
 }
 
-.shopping-input{
-    display:flex;
-    gap:10px;
+.shopping-input {
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
-.shopping-input input:first-child{
-    flex:1;
-}
-.quatity{
-    width:100%;
-}
-.shopping-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-.item-name{
-    flex:1;
-}
-.brought{
-    text-decoration: line-through;
-    color:#a8a8b8;
 
+.shopping-input #itemInput {
+    flex: 1 1 auto;
+    min-width: 0;
 }
-.bottom-buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+
+.shopping-input #quantityInput {
+    flex: 0 0 110px;
+    width: 110px;
 }
-@media (max-width:500px){
-    .shopping-input{
+
+.shopping-input button {
+    flex: 0 0 auto;
+}
+
+@media (max-width:500px) {
+    .shopping-input {
         flex-direction: column;
     }
-    .quatity{
-        width:auto;
+    
+    .shopping-input #itemInput,
+    .shopping-input #quantityInput,
+    .shopping-input button {
+        width: 100%;
+        flex: none;
     }
 }
