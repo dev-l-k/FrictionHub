@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        textarea{
+            min-height: 250px;
+            resize: vertical;
+        }
+        .buttons{
+            display:flex;
+            gap:10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+
+        }
+        .char-count{
+            color: #a8a8b8;
+            margin-top:10px;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../index.html" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <div class="time" id="time"></div>
+
+    </header>
+    <a href="../index.html" class="back-btn">Back</a>
+    <main class="container">
+        <div class="card">
+            <h1>Case Converter</h1>
+            <p class="muted">Quickly chamge your text to any case</p>
+            <div class="app-group">
+                <label>Text</label>
+                <textarea id="text" placeholder="Type or paste your Text here" oninput="updateCount()"></textarea>
+                <p class="char-count" id="count">0 charachters</p>
+            </div>
+            <div class="buttons">
+                <button class="btn-primary" onclick="upperCase()">UPPERCASE</button>
+                <button class="btn-primary" onclick="titleCase()">Title Case</button>
+                <button class="btn-primary" onclick="sentenceCase()">Sentence case</button>
+                <button class="btn-primary" onclick="toggleCase()">tOGGLE cASE</button>
+                <button class="btn-small" onclick="copyText()">Copy</button>
+                <button class="btn-danger btn-small" onclick="clearText()">Clear</button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        Case converter - FrictionHub
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
