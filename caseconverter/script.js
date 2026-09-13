@@ -55,3 +55,9 @@ function copyText(){
     navigator.clipboard.writeText(text.value);
     alert("Text copied");
 }
+function clearText(){
+    text.value= "";
+}
+function updateCount(){
+    count.textContent=text.value.length+" charachters";
+}
