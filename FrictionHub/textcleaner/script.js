@@ -48,6 +48,7 @@ function cleanText(){
     text.value=value;
     
 }
+
 function copyText(){
     if(text.value.trim()===""){
         alert("Nothing to copy");
@@ -56,7 +57,7 @@ function copyText(){
     }
     navigator.clipboard.writeText(text.value);
     alert("Text copied");
-    
+
 
 }
 function clearText(){
