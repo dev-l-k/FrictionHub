@@ -52,10 +52,11 @@ function copyText(){
     if(text.value.trim()===""){
         alert("Nothing to copy");
         return;
-        
+
     }
     navigator.clipboard.writeText(text.value);
     alert("Text copied");
+    
 
 }
 function clearText(){
