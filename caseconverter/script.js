@@ -13,8 +13,7 @@ function titleCase(){
     let words = text.value.toLowerCase().split(" ");
     for (let i = 0; i< words.length;i++){
         if (words[i]!==""){
-            words[i].charAt(0).toUpperCase() + words[i].slice(1);
-
+            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
         }
     }
     text.value= words.join(" ");
@@ -22,7 +21,7 @@ function titleCase(){
 }
 function sentenceCase(){
     let value = text.value.toLowerCase();
-    let sentences = value.split(/([.!?]\s")/);
+    let sentences = value.split(/([.!?]\s+)/);
     for (let i = 0;i < sentences.length; i+=2){
         sentences[i] = sentences[i].trim();
         if (sentences[i] !== ""){
@@ -41,7 +40,7 @@ function toggleCase(){
             result+=letter.toLowerCase();
 
         }else{
-            result+= letter.toUpperCase;
+            result+= letter.toUpperCase();
         }
     }
     text.value=result;
@@ -57,7 +56,9 @@ function copyText(){
 }
 function clearText(){
     text.value= "";
+    updateCount();
 }
 function updateCount(){
-    count.textContent=text.value.length+" charachters";
+    count.textContent=text.value.length+" charachtars";
+    
 }
