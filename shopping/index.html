@@ -7,77 +7,68 @@
     <link rel="stylesheet" href="../style.css">
     <style>
         @media print {
-    @page {
-        size: A4;
-        margin: 20mm;
-    }
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
 
-    body {
-        background: white;
-        color: black;
-    }
+            body {
+                background: white;
+                color: black;
+            }
+            .topbar,footer,.shopping-input,.bottom-buttons,.muted,.task-count,.empty {
+                display:none !important;
+            }
 
-    .topbar,
-    footer,
-    .shopping-input,
-    .bottom-buttons,
-    .muted,
-    .task-count,
-    .empty {
-        display: none !important;
-    }
+            main {
+                width: 100%;
+                margin:0;
+                padding: 0;
+            }
+            .card {
+                border: none;
+                box-shadow:none;
+                background: white;
+                padding:0;
+            }
 
-    main {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
+            .card h1 {
+                color: black;
+                font-size:22px;
+                margin-bottom: 20px;
+            }
+            .list {
+                width: 100%;
+            }
 
-    .card {
-        border: none;
-        box-shadow: none;
-        background: white;
-        padding: 0;
-    }
+            .list-item {
+                background:white;
+                color: black;
+                border: none;
+                border-bottom:1px solid #ddd;
+                border-radius: 0;
+                padding: 12px 0;
+                page-break-inside: avoid;
+            }
 
-    .card h1 {
-        color: black;
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
+            .shopping-item input[type="checkbox"] {
+                width:16px;
+                height: 16px;
+            }
 
-    .list {
-        width: 100%;
-    }
+            .item-name {
+                color: black;
+             }
 
-    .list-item {
-        background: white;
-        color: black;
-        border: none;
-        border-bottom: 1px solid #ddd;
-        border-radius: 0;
-        padding: 12px 0;
-        page-break-inside: avoid;
-    }
+             .bought {
+                color:#777;
+                text-decoration: line-through;
+            }
 
-    .shopping-item input[type="checkbox"] {
-        width: 16px;
-        height: 16px;
-    }
-
-    .item-name {
-        color: black;
-    }
-
-    .bought {
-        color: #777;
-        text-decoration: line-through;
-    }
-
-    .shopping-item button {
-        display: none;
-    }
-}
+            .shopping-item button {
+                display:none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,7 +83,7 @@
         <a href="../index.html" class="back-btn">Back</a>
         <div class="card">
             <h1>Shopping List</h1>
-            <p class="muted">
+            <p style="margin-top: 10px;margin-bottom: 10px;">
                 Add itms to your list and save as pdf
             </p>
             <div class="shopping-input">
@@ -102,7 +93,7 @@
 
 
             </div>
-            <p class="task-count" id="itemCount">
+            <p class="task-count" id="itemCount" style="margin-top:10px;margin-bottom:10px;">
                 0 items
             </p>
             <div class="list" id="shoppingList"></div>

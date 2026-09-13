@@ -68,7 +68,6 @@ function deleteNote(id){
 }
 search.oninput = showNotes;
 showNotes();
-
 function updateTime(){
     const clock = document.getElementById('time');
     const time = new Date().toLocaleTimeString();
@@ -76,3 +75,4 @@ function updateTime(){
 }
 updateTime();
 setInterval(updateTime,1000);
+

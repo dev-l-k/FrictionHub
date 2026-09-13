@@ -87,3 +87,10 @@ function downloadPDF(){
     window.print();
 }
 showItems();
+function updateTime(){
+    const clock = document.getElementById('time');
+    const time = new Date().toLocaleTimeString();
+    clock.textContent = time;
+}
+updateTime();
+setInterval(updateTime,1000);
