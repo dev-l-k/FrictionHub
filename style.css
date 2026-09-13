@@ -8,7 +8,7 @@ body{
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: #101018;
-    color:white;
+    color:#fff;
 }
 
 .topbar{
@@ -22,7 +22,7 @@ body{
 }
 
 .logo{
-    color:white;
+    color:#fff;
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
@@ -48,8 +48,9 @@ main{
 
 }
 .hero h1{
-    font-size: 42px;
     margin-bottom: 12px;
+    font-size: 42px;
+
 }
 .hero p{
     max-width:620px;
@@ -66,7 +67,7 @@ input,textarea{
     width:100%;
     padding: 15px;
     background:#1a1a26;
-    color: white;
+    color: #fff;
     border: 1px solid #333344;
     border-radius: 12px;
     font-family: inherit;

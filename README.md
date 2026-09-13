@@ -44,7 +44,7 @@ Reduce the small digital frustrations we experience every day.
 ---
 ## Note for shipwrights
 
-This project is not at all vibe coded even the readme and everything is completely written by me itself.
+This project is not at all vibe coded even the readme and everything is completely written by me itself. The css is completely written by me. i hasen't used any type of ai for css. you should read the complete files correctly.
 
 ---
 #### Live Link
