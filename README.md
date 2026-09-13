@@ -2,34 +2,34 @@
 ---
 ![Image](assets/1.jpg)
 ---
-FrictionHub is a collection of lightweight, easy-to-use web tools designed to make everyday digital tasks faster and more convenient.
+FrictionHub is a small collection of Quality of Life improving miniweb tools made with html css and js only.
 
 ## Features
 
 - CopyBoard
-Save frequently used text and quickly copy it whenever you need it.
+Here you can save frequently used texts emails etc inside your browser storage
 - Password Generator 
-Generate strong and random passwords for improved account security.
+You can save 100% secure and random passwords. and save it in your browser storage. so if you forgot it you can retrive it again.
 - Text Cleaner
-Clean up messy text by removing unnecessary spaces and fixing unwanted line breaks.
+You can clean a large messy text by removing empty lines. unwanted spaces and more.
 - Case Conveter 
-Convert text between different letter cases quickly and easily.
+Convert a large text into different cases like uppercase lowercase sentnce case etc...
 - Shopping List
 Create and manage shopping lists and save them as PDF files.
 
 ## Problem solved
 - CopyBoard
-Frequently used text such as email addresses, links, messages, prompts, or code snippets often needs to be typed or searched for repeatedly.
+Frequently used texts such as email links code etc needs to be typed or searched again and again.
 - Password Generator 
-Creating secure and unique passwords manually can be difficult and time-consuming.
+Generating unique and 100% secure passwords are very much time consuming.
 - Text Cleaner
-Text copied from websites, PDFs, documents, or other sources can contain unnecessary spaces, extra line breaks, and inconsistent formatting.
+Text copied from websites, PDFs, documents, or others etc contains very much unwanted spaces empty lines and so more. it is very dificult to remove them.
 - Case converter 
-Manually changing text between uppercase, lowercase, title case, or other formats is repetitive and inconvenient.
+Manually changing text between uppercase, lowercase, title case, or other forms are very much time consuming and difficult.
 - Shopping List
-Remembering everything needed during shopping can be difficult, and paper lists can be easily lost.
+Remembering everything needed for for shopping is always difficult. and paper lists may easily be lost
 ---
-- Any of your data entered in this never leaves your device/browser tab.
+- Any of your data entered in this project never leaves your device/browser tab.
 ---
 ## Built with
 
@@ -41,10 +41,12 @@ Remembering everything needed during shopping can be difficult, and paper lists 
 ### Goal
 
 Reduce the small digital frustrations we experience every day.
+
 ---
 ## Note for shipwrights
 
-This app is not at all vibe coded it is completely done by me it self. So please completely check all the codes. 
+This project is not at all vibe coded even the readme and everything is completely written by me itself.
+
 ---
 #### Live Link
 https://frictionhub.devlkakkoth.me
