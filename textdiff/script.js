@@ -12,7 +12,7 @@ const oldText = document.getElementById("oldText");
     
     for (let change of changes) {
       if (change.type === "same") {
-        addLine("same", "  condition ? true : false" + change.text);
+        addLine("same", "  " + change.text);
       }
       
       if (change.type === "removed") {
@@ -127,5 +127,12 @@ const oldText = document.getElementById("oldText");
     newText.value = "";
     result.innerHTML = "";
   }
+  function updateTime(){
+    const clock = document.getElementById('time');
+    const time = new Date().toLocaleTimeString();
+    clock.textContent = time;
+}
+updateTime();
+setInterval(updateTime,1000);
 
 
