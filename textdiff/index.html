@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Difference Finder</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .text-boxes{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        textarea{
+            min-height: 220px;
+            resize: vertical;
+        }
+        .diff{
+            margin-top:20px;
+            
+        }
+        .diff-line{
+            padding: 8px 10px;
+            margin-bottom: 4px;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-break: break-word;
+
+        }
+        .same{
+            background: rgba(80,200,120,0.15);
+
+        }
+        .removed{
+            background: rgba(255,80,80,0.15);
+
+        }
+        .inst{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        @media(max-width:600px){
+            .text-boxes{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="topbar">
