@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Difference Finder</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div id="time">00:00:00</div>
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>Text Difference Finder</h1>
+            <p class="muted">
+                Compare two texts quickly and find what changed.
+            </p>
+            <div class="text-boxes">
+                <div class="app-group">
+                    <label>Original Text</label>
+                    <textarea id="oldText" placeholder="Paste Old Text...."></textarea>
+
+                </div>
+                <div class="app-group">
+                    <label>New Text</label>
+                    <textarea id="newText" placeholder="Paste New Text...."></textarea>
+
+                </div>
+
+            </div>
+            <div class="actions">
+                <button class="btn-primary" onclick="compareText()">Compare</button>
+                <button class="btn-small" onclick="copyResult()">Copy Result</button>
+                <button class="btn-danger" onclick="clearAll()">Clear</button>
+            </div>
+            <div class="inst">🟢 Added 🔴 Deleted ⚪ Unchanged</div>
+            <div class="diff" id="result"></div>
+        </div>
+    </main>
+    <footer>
+        Text Difference Finder - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
