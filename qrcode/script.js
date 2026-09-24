@@ -11,8 +11,8 @@ function generateQR(){
         text:value,
         width: 220,
         height:220,
-        colorDark: #000000,
-        colorLight: #ffffff,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
     });
 }
