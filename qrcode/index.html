@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .qr-box{
+            text-align: center;
+            margin-top:25px;
 
+        }
+        #qrcode{
+            display: inline-block;
+            padding: 15px;
+            background:white;
+            border-radius: 10px;
+        }
+        #qrcode canvas{
+            display:block;
+
+        }
+        .button{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
     <header class="topbar">
