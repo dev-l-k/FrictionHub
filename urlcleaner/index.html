@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Cleaner</title>
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <header class="topbar">
+        <a href="../"class="logo">
+            FrictionHub
+        </a>
+        <div class="time" id="time">00:00:00</div>
+
+    </header>
+    <main class="container">
+
+        <div class="card">
+            <h1>URL Cleaner</h1>
+            <p>Remove tracking parameters and unnecessary texts from urls</p>
+            <div class="app-group">
+                <label>URL</label>
+                <textarea id="url" rows="4" placeholder="Paste a url here..."></textarea>
+
+            </div>
+            <div class="actions">
+                <button class="btn-primary" onclick="cleanURL()">Clean url</button>
+                <button class="btn-danger btn-small" onclick="clearURL()">Clear</button>
+                <button class="btn-small" onclick="copyURL()">Copy</button>
+                <button class="btn-small" onclick="loadDemo()">Load Demo</button>
+            </div>
+            <div class="app-group">
+                <label>Cleaned URL</label>
+                <textarea id="result" rows="4" readonly placeholder="Your Cleaned URL will appear here..."></textarea>
+            </div>
+        </div>
+    </main>
+    <footer>
+        URL Cleaner - FrictionHub
+    </footer>
+    <script src="script.js">
+    </script>
+</body>
+</html>
