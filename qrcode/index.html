@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <div class="time" id="time">00:00:00</div>
+
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>QR code Generator</h1>
+            <p>
+                Turn text or URL to qrcodes
+            </p>
+            <div class="app-group">
+                <label>Text / URL</label>
+                <textarea id="text" placeholder="https://example.com" rows="4"></textarea>
+
+            </div>
+            <div class="buttons">
+                <button class="btn-primary" onclick="generateQR()">Generate QR</button>
+                <button class="btn-danger btn-small" onclick="clearQR()">Clear</button>
+                <button class="btn-small" onclick="downloadQR()">Download QR</button>
+            </div>
+            <div class="qr-box">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        QR code generator - FrictionHub
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
