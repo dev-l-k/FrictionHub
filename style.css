@@ -140,6 +140,9 @@ footer{
     border-top: 1px solid #333344;
 
 }
+.actions{
+    margin-top:15px;
+}
 @media(max-width: 700px){
     .topbar{
         height:62px;
