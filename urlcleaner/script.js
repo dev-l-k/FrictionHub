@@ -48,3 +48,10 @@ function clearURL(){
 function loadDemo(){
     url.value ="https://example.com/products/shoes?utm_source=google&utm_medium=cpc&utm_campaign=sale&fbclid=abc123&color=black";
 }
+function updateTime(){
+    const clock = document.getElementById('time');
+    const time = new Date().toLocaleTimeString();
+    clock.textContent = time;
+}
+updateTime();
+setInterval(updateTime,1000);
