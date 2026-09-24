@@ -27,7 +27,7 @@ function cleanURL(){
             link.searchParams.delete(name);
 
         }
-        result.value = link.toString;
+        result.value = link.toString();
 
     }catch(error){
         alert("Please Enter a valid URL");
