@@ -5,6 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .weather-search{
+            display:flex;
+            gap:10px;
+            margin-top:20px;
+        }
+        .weather-search input{
+            flex:1;
+        }
+        .weather-main{
+            text-align:center;
+            border:1px solid #f8f8f8;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top:20px;
+        }
+        .weather-icon{
+            font-size: 55px;
+        }
+        .temperature {
+            font-size:50px;
+            font-weight: bold;
+        }
+         .condition{
+            color:#f8f8f8;
+
+         } 
+        
+         .weather-info,.forecast{
+            display:grid;
+            gap:10px;
+            margin-top: 15px;
+         }
+         .weather-info{
+            grid-template-columns: repeat(4,1fr);
+         }
+         .forecast{
+            grid-template-columns: repeat(5,1fr);
+         }
+         .weather-info div,.forecast div{
+            border:1px solid #f8f8f8;
+            border-radius: 12px;
+            padding:15px;
+            text-align:center;
+
+         }
+         .weather-info strong,.forecast strong{
+            display:block;
+            font-size:18px;
+
+         }
+         .small{
+            color:#f8f8f8;
+            
+         }
+         .error{
+            color:rosybrown;
+         }
+         @media(max-width:650px){
+            .weather-search{
+                flex-direction: column;
+            }
+            .weather-info{
+                grid-template-columns: 1fr 1fr;
+            }
+            .forecast{
+                grid-template-columns: repeat(2,1fr);
+            }
+         }
+    </style>
 </head>
 <body>
     <header class="topbar">
