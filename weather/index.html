@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="../">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>Weather Dashboard</h1>
+            <p>
+                Search a city or place to see its weather.
+            </p>
+            <div class="weather-search">
+                <input type="text" id="city" placeholder="Enter a city or place..." onkeydown="checkEnter(event)">
+                <button class="btn-primary" onclick="searchWeather()">Search</button>
+            </div>
+            <p id="error" class="error"></p>
+            <div id="weather"></div>
+        </div>
+    </main>
+    <footer>
+        Weather - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
