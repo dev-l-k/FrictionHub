@@ -8,7 +8,7 @@ function checkEnter(event){
     }
 }
 async function searchWeather() {
-    let name = city.ariaValueMax.trim();
+    let name = city.value.trim();
     if (name===""){
         error.textContent = "Enter a place first";
         return;
@@ -16,7 +16,7 @@ async function searchWeather() {
     error.textContent="";
     weather.innerHTML = "<p class='muted'>Searching...</p>";
     try{
-        let response = await fetch("https://geocoding-api.open-meteo.com/v1/search"+"?name"+encodeURIComponent(name)+"&count=1&language=en&format=json");
+        let response = await fetch("https://geocoding-api.open-meteo.com/v1/search"+"?name="+encodeURIComponent(name)+"&count=1&language=en&format=json");
         let data = await response.json();
         if(!data.results){
             throw new Error();
@@ -28,7 +28,7 @@ async function searchWeather() {
         error.textContent="Place not found";
     }
 }
-async function getWeather() {
+async function getWeather(lat, lon, name, country) {
     try{
         let url =
             "https://api.open-meteo.com/v1/forecast" +
@@ -150,7 +150,7 @@ function showWeather(name,country,data){
     
 }
 function getCondition(code){
-    if(code===0)return "Clear shy";
+    if(code===0)return "Clear sky";
     if(code<=2)return "Partly cloudy";
     if(code===3)return "Overcast";
     if(code<=48)return "Foggy";
