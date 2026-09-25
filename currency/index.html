@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .converter{
+            display:grid;
+            gap:15px;
+            margin-top:20px;
+        }
+        .converter-row{
+            display:grid;
+            grid-template-columns:1fr auto 1fr;
+            gap:10px;
+            align-items: end;
+        }
+        .result{
+            text-align:center;
+            padding:25px;
+            padding:25px;
+            margin-top:15px;
+            border-radius: 12px;
+        }
+        .amount{
+            font-size:32px;
+            font-weight:bold;
+
+        }
+        .muted{
+            color: #f9f9f9;
+        }
+        .error{
+            color: rosybrown;
+        }
+        @media(max-width:600px){
+            .currency-row{
+                grid-template-columns: 1fr;
+            }
+        }
+        .currency-row select{
+            width:100%;
+            padding: 12px 14px;
+            border:1px solid gray;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .swap-btn{
+            width:45px;
+            height:45px;
+            padding:0;
+            border-radius: 50%;
+            font-size: 25px;
+            cursor:pointer
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>Currency Converter</h1>
+            <p>Convert currencies using live API data.</p>
+            <div class="converter">
+                <input type="number" id="amount" value="1" min="0" step="any" oninput="convert()">
+                <div class="currency-row">
+                    <select id="from" onchange="convert()"></select>
+                    <button class="btn-small swap-btn" onclick="swap()">⇄</button>
+                    <select id="to" onchange="convert()"></select>
+                </div>
+                <p class="error" id="error"></p>
+                <div id="result"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Currency Converter - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
