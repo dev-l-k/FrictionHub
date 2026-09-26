@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Converter</title>
     <link rel="stylesheet" href="../style.css">
+    .color-preview {
+            width: 100%;
+            height: 180px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            margin: 20px 0;
+        }
+
+        .color-picker {
+            width: 100%;
+            height: 60px;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        .color-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .value-box {
+            background: var(--panel-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .value-box label {
+            display: block;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .value-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .value-row input {
+            flex: 1;
+            min-width: 0;
+        }
+
+        @media (max-width: 650px) {
+            .color-values {
+                grid-template-columns: 1fr;
+            }
+        }
 </head>
 <body>
     <header class="topbar">
@@ -18,26 +67,71 @@
         <p>Convert colors btw hex rgb and hsl</p>
         <input type="color" id="picker"class="color-picker" value="#ffd866" oninput="fromPicker()">
         <div id="preview" class="color-preview"></div>
-        <div class="app-group">
+        <div class="form-group">
+
             <label>HEX</label>
+
             <div class="value-row">
-                <input value="#ffd866" id="hex" oninput="fromHex()">
-                <button class="btn-small" onclick="copyValue('hex')">Copy</button>
+
+                <input
+                    id="hex"
+                    value="#ffd866"
+                    oninput="fromHex()"
+                >
+
+                <button
+                    class="btn-small"
+                    onclick="copyValue('hex')"
+                >
+                    Copy
+                </button>
+
             </div>
+
         </div>
-        <div class="app-group">
-            <label>RGB</label>
-            <div class="value-row">
-                <input id="hex" readonly>
-                <button class="btn-small" onclick="copyValue('rgb')">Copy</button>
+
+
+        <div class="color-values">
+
+            <div class="value-box">
+
+                <label>RGB</label>
+
+                <div class="value-row">
+
+                    <input id="rgb" readonly>
+
+                    <button
+                        class="btn-small"
+                        onclick="copyValue('rgb')"
+                    >
+                        Copy
+                    </button>
+
+                </div>
+
             </div>
-        </div>
-        <div class="app-group">
-            <label>HEX</label>
-            <div class="value-row">
-                <input id="hsl" readonly>
-                <button class="btn-small" onclick="copyValue('hsl')">Copy</button>
+
+
+            <div class="value-box">
+
+                <label>HSL</label>
+
+                <div class="value-row">
+
+                    <input id="hsl" readonly>
+
+                    <button
+                        class="btn-small"
+                        onclick="copyValue('hsl')"
+                    >
+                        Copy
+                    </button>
+
+                </div>
+
             </div>
+
         </div>
         
     </main>

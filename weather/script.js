@@ -176,7 +176,8 @@ function getIcon(code){
 
     return "🌤️";
 
-}function updateTime(){
+}
+function updateTime(){
     const clock = document.getElementById('time');
     const time = new Date().toLocaleTimeString();
     clock.textContent = time;
