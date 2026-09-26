@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Converter</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="container">
+        <h1>Color Converter</h1>
+        <p>Convert colors btw hex rgb and hsl</p>
+        <input type="color" id="picker"class="color-picker" value="#ffd866" oninput="fromPicker()">
+        <div id="preview" class="color-preview"></div>
+        <div class="app-group">
+            <label>HEX</label>
+            <div class="value-row">
+                <input value="#ffd866" id="hex" oninput="fromHex()">
+                <button class="btn-small" onclick="copyValue('hex')">Copy</button>
+            </div>
+        </div>
+        <div class="app-group">
+            <label>RGB</label>
+            <div class="value-row">
+                <input id="hex" readonly>
+                <button class="btn-small" onclick="copyValue('rgb')">Copy</button>
+            </div>
+        </div>
+        <div class="app-group">
+            <label>HEX</label>
+            <div class="value-row">
+                <input id="hsl" readonly>
+                <button class="btn-small" onclick="copyValue('hsl')">Copy</button>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        Color Converter - FrictionHub
+    </footer>
+</body>
+</html>
