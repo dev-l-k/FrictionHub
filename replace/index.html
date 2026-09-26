@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find & Replace</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .find-box{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:10px;
+        }
+        .buttons{
+            display:flex;
+            gap:10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        textarea{
+            min-height: 300px;
+            resize: vertical;
+        }
+        @media(max-width:600px){
+            .find-box{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>Find and Replace</h1>
+            <p>Find text and replace it throughout your content.</p>
+            <div class="app-group">
+                <label>Text</label>
+                <textarea id="text" placeholder="Paste your content here"></textarea>
+
+            </div>
+            <div class="find-box">
+                <div class="app-group">
+                    <label>Find</label>
+                    <input type="text" id="find" placeholder="Text to find..">
+                </div>
+                <div class="app-group">
+                    <label>Replace with</label>
+                    <input type="text" id="replace" placeholder="Replacement text..">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn-primary" onclick="replaceAll()">Replace</button>
+                <button class="btn-small" onclick="findText()">Find</button>
+                <button class="btn-small" onclick="copyText()">Copy</button>
+                <button class="btn-small btn-danger" onclick="clearAll()">Clear</button>
+            </div>
+            <p id="count" class="count"></p>
+
+        </div>
+    </main>
+    <footer>
+        Find and replace - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
