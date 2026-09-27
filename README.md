@@ -30,6 +30,8 @@ finding small small differences in texts paragraphs are very boring
 remove tracking ids and unwanted things from url.
 - Weather dashboard
 find the weather of a city by searching simply.
+- Code formatter
+Formats html css js and python codes clean and neat.
 
 ## Problem solved
 - CopyBoard
@@ -56,6 +58,8 @@ finding small small differences in texts paragraphs are very boring
 remove tracking ids and unwanted things from url.
 - Weather dashboard
 find the weather of a city by searching simply.
+- Code formatter
+Formats html css js and python codes clean and neat.
 ---
 - Any of your data entered in this project never leaves your device/browser tab.
 ---

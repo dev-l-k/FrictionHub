@@ -145,4 +145,5 @@ function updateTime(){
     clock.textContent = time;
 }
 updateTime();
-setInterval(updateTime,1000);
+setInterval(updateTime,1000);l
+
