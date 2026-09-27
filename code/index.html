@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code formatter</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .formatter{
+            display:grid;
+            gap:15px;
+            margin-top:20px;
+        }
+        .options{
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap:10px;
+
+        }
+        .buttons{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+        }
+        .sucess{
+            color:#72d68a;
+
+        }
+        .error{
+            color:rosybrown;
+        }
+        @media(max-width:600px){
+            .options{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><a href="../" class="logo">Friction<span>Hub</span></a> <div class="time" id="time">00:00:00</div></header>
+    <main class="container">
+        <div class="card">
+            <h1>Code Formatter</h1>
+            <p>Format html css js and python codes.</p>
+            <div class="formatter">
+                <div class="options">
+                    <select id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="json">JSON</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+
+                    </select>
+                    <select id="indent">
+                        <option value="2">2 spaces</option>
+                        <option value="4">4 spaces</option>
+                    </select>
+
+                </div>
+                <textarea id="code" placeholder="Paste your code here..."></textarea>
+                <div class="buttons">
+                    <button class="btn-primary" onclick="formatCode()">Format</button>
+                    <button class="btn-small" onclick="minifyCode()">Minify</button>
+                    <button class="btn-small" onclick="copyCode()">Copy</button>
+                    <button class="btn-small btn-danger" onclick="clearCode()">Clear</button>
+
+                </div>
+                <p id="status" class="status"></p>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        Code formatter - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
