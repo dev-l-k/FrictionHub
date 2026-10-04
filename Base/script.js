@@ -74,7 +74,7 @@ function imageToBase64(){
     }
     let reader = new FileReader();
     reader.onload = function(){
-        imageToBase64.value = reader.result;
+        output.value = reader.result;
         preview.src = reader.result;
         preview.style.display="block";
         status.textContent = "Image converted to Base64";
@@ -83,10 +83,7 @@ function imageToBase64(){
     reader.readAsDataURL(file);
 
 }
-function base64ToImage(){
-    let value = imageToBase64.value.trim();
 
-}
 function base64ToImage() {
 
     let value = imageBase64.value.trim();
