@@ -19,7 +19,7 @@ function checkEnter(event){
     status.className = "status";
 
     try{
-        let response = await fetch("https://openlibrary.org/search.json?g="+encodeURIComponent(query)+"&limit=12");
+        let response = await fetch("https://openlibrary.org/search.json?q="+encodeURIComponent(query)+"&limit=12");
         if(!response.ok){
             throw new Error();
         }
