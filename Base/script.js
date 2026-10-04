@@ -2,7 +2,8 @@ const textMode = document.getElementById("textMode");
 const imageMode = document.getElementById("imageMode");
 const input = document.getElementById("input");
 const result = document.getElementById('result');
-const imageInput = document.getElementById("imageBase64");
+const imageInput = document.getElementById("imageInput");
+const imageBase64 = document.getElementById("imageBase64");
 const preview = document.getElementById("preview");
 const status = document.getElementById("status");
 function showText(){
@@ -26,7 +27,7 @@ function encodeBase64(){
     try{
         result.value = btoa(unescape(encodeURIComponent(input.value)));
         status.textContent = "Text Encoded Successfully";
-        status.textContent = "status success";
+        status.className = "status success";
     }catch{
         status.textContent="Could not encode to base 64";
         status.className="status error";
@@ -74,7 +75,7 @@ function imageToBase64(){
     }
     let reader = new FileReader();
     reader.onload = function(){
-        output.value = reader.result;
+        imageBase64.value = reader.result;
         preview.src = reader.result;
         preview.style.display="block";
         status.textContent = "Image converted to Base64";
