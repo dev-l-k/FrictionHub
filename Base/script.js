@@ -84,6 +84,7 @@ function imageToBase64(){
 
 }
 
+
 function base64ToImage() {
 
     let value = imageBase64.value.trim();
