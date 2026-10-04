@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base 64 Encoder/Decoder</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Base 64 Encoder/Decoder</title>
+    <style>
+        .tabs{
+            display:flex;
+            gap:10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+
+        }
+        .buttons{
+            display:flex;
+            gap:10px;
+            flex-wrap: wrap;
+            margin-top:15px;
+        }
+        textarea{
+            min-height: 280px;
+            font-family: monospace;
+            resize: vertical;
+        }
+        .preview{
+            max-width: 100%;
+            max-height: 400px;
+            margin-top: 15px;
+            border-radius: 10px;
+            display:none;
+        }
+        .status{
+            margin-top: 15px;
+
+        }
+        .sucess{
+            color: #72d68a;
+        }
+        .error{
+            color:rosybrown;
+        }
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">
+            Friction<span>Hub</span>
+        </a>
+        <div id="time" class="time">00:00:00</div>
+    </header>
+
+<main class="container">
+<div class="card">
+    <h1>Base 64 Encoder and Decoder</h1>
+    <p>
+        Encode text/ images to base 64 or decode base 64 to text or image.
+    </p>
+    <div class="tab">
+        <button class="btn-primary" onclick="showText()">Text</button>
+        <button class="btn-small" onclick="showImage()">Image</button>
+    </div>
+    <div id="textMode">
+        <div class="app-group">
+            <label>Input</label>
+            <textarea id="input" placeholder="Enter text to Base 64.."></textarea>
+
+        </div>
+        <div class="buttons">
+            <button class="btn-primary" onclick="encodeBase64()">Encode</button>
+            <button class="btn-small" onclick="decodeBase64()">Decode</button>
+            <button class="btn-primary" onclick="copyResult()">Copy</button>
+            <button class="btn-danger btn-small" onclick="clearAll()">Clear</button>
+
+        </div>
+        <div class="app-group">
+            <label>Result</label>
+            <textarea id="result" readonly placeholder="Result will appear here"></textarea>
+
+        </div>
+
+    </div>
+    <div id="imageMode" class="hidden">
+        <div class="app-group">
+            <label>Select Image</label>
+            <input type="file" id="imageInput" accept="image/*" onchange="imageToBase64()">
+        </div>
+        <img id="preview" class="preview">
+        <div class="app-group">
+            <label>Base 64</label>
+            <textarea id="imageBase64" placeholder="Paste Base64 image data here..."></textarea>
+
+        </div>
+        <div class="buttons">
+            <button class="btn-primary" onclick="imageToBase64()">
+                Image to Base64
+            </button>
+            <button class="btn-small" onclick="base64ToImage()">
+                Base64 to Image
+            </button>
+            <button class="btn-small" onclick="copyImageBase64()">
+                Copy Base64
+            </button>
+            <button class="btn-danger btn-small" onclick="clearImage()">Clear</button>
+        </div>
+    </div>
+    <p class="status" id="status"></p>
+</div>
+</main>
+<footer>
+    Base64 Encoder/Decoder - FrictionHub
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
