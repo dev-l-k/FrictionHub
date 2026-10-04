@@ -7,7 +7,7 @@ const preview = document.getElementById("preview");
 const status = document.getElementById("status");
 function showText(){
     textMode.classList.remove("hidden");
-    imageMode.classList.add("remove");
+    imageMode.classList.add("hidden");
     status.textContent = "";
 }
 function showImage(){
