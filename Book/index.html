@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .search-box{
+            display:flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .search-box input{
+            flex: 1;
+        }
+        .books{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .book{
+            background: darkgrey;
+            border:1px solid grey;
+            border-radius: 12px;
+            padding:15px;
+
+        }
+        .book-cover{
+            width:100%;
+            height:230px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: darkgrey;
+
+        }
+        .book h3{
+            margin:12px 0 5px;
+        }
+        .author{
+            color:whitesmoke;
+
+        }
+        .year{
+            color: antiquewhite;
+            font-size: 14px;
+        }
+        .status{
+            margin-top:20px;
+            color:whitesmoke;
+
+        }
+        .error{
+            color:rosybrown;
+
+        }
+        @media (max-width:800px){
+            .books{
+                grid-template-columns: repeat(2 1fr);
+
+            }
+        }
+        @media (max-width:550px){
+            .search-box{
+                flex-direction: column;
+            }
+            .books{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">
+        Friction<span>Hub</span>
+        </a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="container">
+        <div class="card">
+            <h1>Book Finder</h1>
+            <p>Search and find details of Books</p>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search by title, author, ISBN.." onkeydown="checkEnter(event)">
+                <button class="btn-primary" onclick="searchBooks()"></button>
+            </div>
+            <p id="status" class="status"></p>
+            <div id="books" class="books"></div>
+        </div>
+    </main>
+    <footer>
+        Book Finder - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
