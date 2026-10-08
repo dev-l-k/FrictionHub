@@ -1,7 +1,7 @@
 const search = document.getElementById("search");
 const recipes = document.getElementById("recipes");
 const status = document.getElementById("status");
-function checkEnter(event){
+function checkEvent(event){
     if(event.key === "Enter"){
         searchRecipes();
     }
@@ -9,7 +9,7 @@ function checkEnter(event){
 async function searchRecipes() {
     let query = search.value.trim();
     if(query===""){
-        search.textContent="Enter a recipe or ingredient";
+        status.textContent="Enter a recipe or ingredient";
         status.className = "status error";
         return;
     }
@@ -77,7 +77,7 @@ function showRecpies(meals){
 async function showRecipe(id) {
     try{
         let response = await fetch("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+id);
-        let date = await response.json();
+        let data = await response.json();
         let meal = data.meals[0];
         let ingredients ="";
         for(let i=1;i<=20;i++){
