@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .search-box{
+            display:flex;
+            gap:10px;
+            margin-top:20px;
+        }
+        .search-box input {
+            flex:1;
+
+        }
+        .recipe{
+            background:#333;
+            border:1px solid #666;
+            border-radius: 12px;
+            overflow:hidden;
+        }
+        .recipe img{
+            width:100%;
+            height:220px;
+            object-fit: cover;
+
+        }
+        .recipe-content{
+            padding:15px;
+
+        }
+        .recipe h3{
+            margin-bottom:8px;
+        }
+        .category {
+            font-size: 14px;
+        }
+        .status{
+            margin-top: 20px;
+
+        }
+        .error{
+            color:rosybrown;
+        }
+        .details{
+            margin-top:10px;
+        }
+        @media(max-width:800px){
+            .recipes{
+                grid-template-columns: repeat(2,1fr);
+
+            }
+        }
+        @media(max-width:550px){
+            .search-box{
+                flex-direction: column;
+            }
+            .recipes{
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>.
+    <main class="container">
+        <div class="card">
+            <h1>Recipe Finder</h1>
+            <p>Search for recipes meals etc. Powered by TheMealDb</p>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search for a recipe..."  onkeydown="checkEvent(event)">
+                <button class="btn-primary" onclick="searchRecipes()">
+                    Search
+                </button>
+            </div>
+            <p id="status" class="status"></p>
+            <div id="recipes" class="recipes"></div>
+        </div>
+    </main>
+    <footer>
+        RecipeFinder - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
