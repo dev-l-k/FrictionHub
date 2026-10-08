@@ -161,3 +161,10 @@ async function showRecipe(id) {
         status.className ="status error";
     }
 }
+function updateTime(){
+    const clock = document.getElementById('time');
+    const time = new Date().toLocaleTimeString();
+    clock.textContent = time;
+}
+updateTime();
+setInterval(updateTime,1000);
