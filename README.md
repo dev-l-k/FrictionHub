@@ -33,6 +33,12 @@ remove tracking ids and unwanted things from url.
 find the weather of a city by searching simply.
 - Code formatter
 Formats html css js and python codes clean and neat.
+- Base 64 converter
+Convert images and texts into base64 and decode them too.
+- BooksFinder
+Uses openlibrary api to find details of many books.
+- RecipeFinder
+Uses themealdb api to find images and recipe to find food items
 
 ## Problem solved
 - CopyBoard
@@ -61,6 +67,12 @@ remove tracking ids and unwanted things from url.
 find the weather of a city by searching simply.
 - Code formatter
 Formats html css js and python codes clean and neat.
+- Base 64 converter
+Convert images and texts into base64 and decode them too.
+- BooksFinder
+Uses openlibrary api to find details of many books.
+- RecipeFinder
+Uses themealdb api to find images and recipe to find food items
 ---
 - Any of your data entered in this project never leaves your device/browser tab.
 ---
@@ -75,7 +87,17 @@ Formats html css js and python codes clean and neat.
 
 Reduce the small digital frustrations we experience every day.
 
+---
 
+## Testing
+
+- First clone this repo to your local directory by executing
+
+```sh
+git clone https://github.com/dev-l-k/FrictionHub.git
+```
+
+Then open the `index.html` in your browser.
 
 ---
 #### Live Link
