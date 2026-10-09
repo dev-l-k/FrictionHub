@@ -13,7 +13,7 @@
         Friction<span>Hub</span>
     </a>
 
-    <div class="time" id="time"></div>
+    <div class="time" id="time">00:00:00</div>
 
     </header>
     <main>
@@ -27,17 +27,18 @@
             <input type="text" id="search" placeholder="Search..." autocorrect="off">
 
         </div>
-        <h1 class="section-title">Apps</h1>
-        <div class="apps">
+        
+        <section class="app-section">
+            <div class="section-heading">
+                <h2>Text Tools</h2>
+                <p>Clean, edit, compare and transform text.</p>
+            </div>
+            <div class="apps">
+
             <a href="copyboard/index.html" class="app-card">
                 <div class="app-icon">🗒️</div>
                 <h3>CopyBoard</h3>
                 <p>Save frequently used text and other data here. and copy it instantly.</p>
-            </a>
-            <a href="password/index.html" class="app-card">
-                <div class="app-icon">🔐</div>
-                <h3>Password Generator</h3>
-                <p>Generate strong random passwords.</p>
             </a>
             <a href="textcleaner/index.html" class="app-card">
                 <div class="app-icon">🧹</div>
@@ -49,31 +50,83 @@
                 <h3> Case Conveter </h3>
                 <p>Change the cases of any text and instantly copy it.</p>
             </a>
-            <a href="./shopping/index.html" class="app-card">
-                <div class="app-icon">🛒</div>
-                <h3>Shopping list</h3>
-                <p>Add your items in the list and save pdfs</p>
-            </a>
-            <a href="./qrcode" class="app-card">
-                <div class="app-icon">📊</div>
-                <h3>QR code Generator</h3>
-                <p>Generate QR codes from texts and URLs</p>
-            </a>
             <a href="./textdiff" class="app-card">
                 <div class="app-icon">🔤</div>
                 <h3>Text Difference Finder</h3>
                 <p>Find the difference between two texts</p>
+            </a>
+            <a href="./replace" class="app-card">
+                <div class="app-icon">📃</div>
+                <h3>Find and replace</h3>
+                <p>Find and replace texts froma pragraph.</p>
+            </a>
+            <a href="./Base" class="app-card">
+                <div class="app-icon">📃</div>
+                <h3>Base64 Converter</h3>
+                <p>Convert texts or images to base64 code.</p>
+            </a>
+
+
+
+            </div>
+        </section>
+        <section class="app-section">
+            <div class="section-heading">
+                <h2>Devloper Tools</h2>
+                <p>Useful utilities for working with code and web data</p>
+            </div>
+            <div class="apps">
+                <a href="./jsonformatter" class="app-card">
+                <div class="app-icon">{ }</div>
+                <h3>JSON Formatter</h3>
+                <p>Format and minify json codes easily and quickly</p>
+            </a>
+            <a href="./code" class="app-card">
+                <div class="app-icon">💻</div>
+                <h3>Code formatter</h3>
+                <p>Format Html css js and python codes and clean it</p>
             </a>
             <a href="./urlcleaner" class="app-card">
                 <div class="app-icon">🔗</div>
                 <h3>URL cleaner</h3>
                 <p>Remove Tracking parameters and other datas from urls.</p>
             </a>
-            <a href="./jsonformatter" class="app-card">
-                <div class="app-icon">{ }</div>
-                <h3>JSON Formatter</h3>
-                <p>Format and minify json codes easily and quickly</p>
+            <a href="./qrcode" class="app-card">
+                <div class="app-icon">📊</div>
+                <h3>QR code Generator</h3>
+                <p>Generate QR codes from texts and URLs</p>
             </a>
+            <a href="./color" class="app-card">
+                <div class="app-icon">🎨</div>
+                <h3>Color Converter</h3>
+            <p>Convert colors to hex rgb and hsl.</p>
+            </a>
+
+            </div>
+        </section>
+
+        <section class="app-section">
+            <div class="section-heading">
+                <h2>Everyday Utilities</h2>
+                <p>Small tools for common tasks and daily life.</p>
+            </div>
+            <div class="apps">
+                <a href="password/index.html" class="app-card">
+                <div class="app-icon">🔐</div>
+                <h3>Password Generator</h3>
+                <p>Generate strong random passwords.</p>
+            </a>
+            
+            
+            <a href="./shopping/index.html" class="app-card">
+                <div class="app-icon">🛒</div>
+                <h3>Shopping list</h3>
+                <p>Add your items in the list and save pdfs</p>
+            </a>
+            
+            
+            
+            
             <a href="./currency" class="app-card">
                 <div class="app-icon">💵</div>
                 <h3>Currency Exchange</h3>
@@ -84,27 +137,15 @@
                 <h3>Weather</h3>
                 <p>Search and find weather of a place</p>
             </a>
-            <a href="./replace" class="app-card">
-                <div class="app-icon">📃</div>
-                <h3>Find and replace</h3>
-                <p>Find and replace texts froma pragraph.</p>
-            </a>
-            <a href="./color" class="app-card">
-                <div class="app-icon">🎨</div>
-                <h3>Color Converter</h3>
-            <p>Convert colors to hex rgb and hsl.</p>
-            </a>
-            <a href="./code" class="app-card">
-                <div class="app-icon">💻</div>
-                <h3>Code formatter</h3>
-                <p>Format Html css js and python codes and clean it</p>
-            </a>
-            <a href="./Base" class="app-card">
-                <div class="app-icon">📃</div>
-                <h3>Base64 Converter</h3>
-                <p>Convert texts or images to base64 code.</p>
-            </a>
-            <a href="./Book" class="app-card">
+            </div>
+        </section>
+        <section class="app-section">
+            <div class="section-heading">
+                <h2>Discover</h2>
+                <p>Find something to read or cook</p>
+            </div>
+            <div class="apps">
+                <a href="./Book" class="app-card">
                 <div class="app-icon">📚</div>
                 <h3>Books Finder</h3>
                 <p>Find the deatils of millions of books in openlibrary</p>
@@ -114,12 +155,8 @@
                 <h3>Recipe Hub</h3>
                 <p>Cook something delicious.</p>
             </a>
-            
-            
-
-
-
-        </div>
+            </div>
+        </section>
     </main>
     <footer>
         FrictionHub - For a Smooth Digital Life
