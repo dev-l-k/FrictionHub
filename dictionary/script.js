@@ -1,5 +1,5 @@
 const $ = id => document.getElementById(id);
-const form = $("searchForm");
+const form = $("search-form");
 const input = $("wordInput");
 const message = $("message");
 const result = $("result");
@@ -10,7 +10,7 @@ function saveFavorites(favorites){
 }
 function getFavorites(){
     try{
-        return JSOM.parse(localStorage.getItem("frictionhubDictionaryFavorites"))||[];
+        return JSON.parse(localStorage.getItem("frictionhubDictionaryFavorites"))||[];
 
     }catch{
         return [];
@@ -129,3 +129,8 @@ document.addEventListener("click",event=>{
     }
 });
 renderFavorites();
+function updateClock() {
+    $("time").textContent = new Date().toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+updateClock();
