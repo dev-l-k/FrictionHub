@@ -10,7 +10,7 @@ function render(){
     const min = Math.floor(remaining/60);
     const sec = remaining%60;
     $("display").textContent=`${String(min).padStart(2,"0")}:${String(sec).padStart(2,"0")}`;
-    $("bar").style.width = `${remaining/total*100}`;
+    $("bar").style.width = `${(remaining/total)*100}%`;
 }
 function stop(){
     clearInterval(timer);
@@ -31,7 +31,7 @@ function tick(){
     render();
     if(!remaining){
         stop();
-    }
+    
     if (mode === "focus"){
         sessions++;
         $("sessions").textContent = sessions;
@@ -40,13 +40,14 @@ function tick(){
         $("status").textContent = "Session complete!";
     }
 }
+}
 $("start").onclick = () => {
     if(timer){
         stop();
         $("status").textContent = "Timer paused";
         return;
     }
-    endTime = Date.now + remaining*1000;
+    endTime = Date.now() + remaining*1000;
     $("start").textContent = "Pause";
     $("status").textContent = "Timer running";
     timer = setInterval(tick,250);
