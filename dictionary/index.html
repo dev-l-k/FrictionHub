@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .dictionary{
+            max-width: 750px;
+            margin:35px auto;
+
+        }
+        .search-form{
+            display:flex;
+            gap:10px;
+            margin: 25px 0;
+        }
+        .search-form input{
+            flex:1;
+            min-width:0;
+            padding: 13px;
+            background:#333;
+            color:whitesmoke;
+            border: 1px solid white;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        .word-heading{
+            display:flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap:12px;
+
+        }
+        .word-heading h2{
+            margin:0;
+            overflow-wrap: anywhere;
+        }
+        .meaning{
+            padding:20px 0;
+            border-bottom: 1px solid #222;
+        }
+        .definition{
+            line-height: 1.7;
+            margin:12px 0;
+        }
+        .favourites{
+            margin-top:30px;
+        }
+        .favorite-item{
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            gap:10px;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .favorite-word{
+            cursor:pointer;
+            color:whitesmoke;
+            overflow-wrap: anywhere;
+        }
+        .message{
+            color:white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .result-actions{
+            display: flex;
+            gap:10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        @media(max-width:480px){
+            .search-form{
+                flex-direction: column;
+
+            }
+            .search-form button{
+                width:100%;
+                
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="app-page">
+        <section class="app-title">
+            <h1>Dictionary</h1>
+            <p>Discover word meanings examples and more...</p>
+        </section>
+        <form class="search-form" id="search-form">
+            <input type="search" id="wordInput" placeholder="Enter an English word.." aria-label="Word to look up" required maxlength="100">
+            <button class="btn-primary" type="submit">Search</button>
+        </form>
+        <p class="message" id="message">Search for a word to get started..</p>
+        <section class="card" id="result" hidden></section>
+        <section class="card favorites">
+            <h2>Favorite Words</h2>
+            <p class="message" id="emptyFavorites">Your saved word will appear here.</p>
+            <div id="favoriteList"></div>
+        </section>
+        
+    </main>
+    <footer>
+        Dictionary - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
