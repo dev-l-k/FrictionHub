@@ -39,6 +39,12 @@ Convert images and texts into base64 and decode them too.
 Uses openlibrary api to find details of many books.
 - RecipeFinder
 Uses themealdb api to find images and recipe to find food items
+- Dictionary 
+Uses Dictionary api to get meaning and other information about words ir phrases
+- Pomodaro Timer
+Focus,take break and acheive your gols through pomodaro timer.
+- CSS Gradient Generator 
+Make CSS Gradients by selecting colors only and instantly copy the code
 
 ## Problem solved
 - CopyBoard
@@ -73,6 +79,12 @@ Convert images and texts into base64 and decode them too.
 Uses openlibrary api to find details of many books.
 - RecipeFinder
 Uses themealdb api to find images and recipe to find food items
+- Dictionary 
+Uses Dictionary api to get meaning and other information about words ir phrases
+- Pomodaro Timer
+Focus,take break and acheive your gols through pomodaro timer.
+- CSS Gradient Generator 
+Make CSS Gradients by selecting colors only and instantly copy the code
 ---
 - Any of your data entered in this project never leaves your device/browser tab.
 ---
@@ -82,6 +94,12 @@ Uses themealdb api to find images and recipe to find food items
 - CSS
 - JS
 - GITHUB PAGES
+---
+### Added PWA setup to the website
+- Go to https://frictionhub.devlkakkoth.me
+- In the browser settings click Addto homescreen
+- Then click Install.
+- the PWA will be installed to your home screen
 ---
 ### Goal
 
