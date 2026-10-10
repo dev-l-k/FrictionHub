@@ -5,11 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+        .timer{
+            max-width: 500px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .modes,.control{
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        
+        }
+        .modes button, .controls button{
+            cursor: pointer;
+        }
+        .mode{
+            padding: 10px 14px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background: #444;
+            color:whitesmoke;
+        }
+        .mode.active{
+            background: #111;
+            color:whitesmoke;
+        }
+        #display{
+            font-size: clamp(60px,15vw, 90px);
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+            margin:25px 0;
+        }
+        .progress{
+            height:7px;
+            background-color: #111;
+            border-radius: 10px;
+            overflow:hidden;
+
+        }
+        #bar{
+            height:100%;
+            width:100%;
+            background:lemonchiffon;
+        }
+        .settings{
+            margin-top: 25px;
+            text-align: left;
+        }
+        .settings input{
+            width:65px;
+            padding: 8px;
+            margin: 8px;
+            background: #222;
+            color:whitesmoke;
+            border: 1px solid #555;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <header class="topbar">
         <a href="../" class="logo">Friction<span>Hub</span></a>
-        <div class="time" id="time">00:00:00</div>
+        <div class="time" id="clock">00:00:00</div>
     </header>
+    <main class="app-page">
+        <section class="app-header">
+            <h1>Pomodoro Timer</h1>
+            <p>Focus take breaks, and get things done.</p>
+        </section>
+        <div class="card" style="text-align: center;">
+            <div class="modes">
+                <button class="mode active" data-mode="focus">Focus</button>
+                <button class="mode" data-mode="short">Short Break</button>
+                <button class="mode" data-mode="long">Long Break</button>
+            </div>
+            <p id="status">Ready to focus</p>
+            <div id="display">25:00</div>
+            <div class="progress">
+                <div id="bar"></div>
+            </div>
+            <div class="control">
+                <button class="btn-primary" id="start">Focus</button>
+                <button class="btn-small" id="reset">Reset</button>
+                <button class="btn-small" id="skip">Skip</button>
+            </div>
+            <p>Completed focus sessions: <strong id="sessions">0</strong></p>
+            <details class="settings">
+                <summary>Timer settings</summary>
+                <p>Focus (minutes): <input id="focus" type="number" min="1" max="180" value="25"></p>
+                <p>Short break: <input id="short" type="number" min="1" max="60" value="5"></p>
+                <p>Long break: <input id="long" type="number" min="1" max="90" value="15"></p>
+                <button class="btn-primary" id="save">Save Settings</button>
+            </details>
+        </div>
+    </main>
+    <footer>
+        Pomodoro Timer - FrictionHub
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
