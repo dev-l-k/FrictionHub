@@ -52,3 +52,23 @@ $("start").onclick = () => {
     timer = setInterval(tick,250);
 
 };
+$("reset").onclick = ()=>setMode(mode);
+$("skip").onclick = ()=>setMode(mode==="focus"?(sessions>0&& sessions%4===0?"long":"short"):"focus");
+modes.forEach(b => b.onclick = () => setMode(b.dataset.mode));
+$("save").onclick = () => {
+    for (const key of Object.keys(durations)) {
+        const value = Number($(key).value);
+        if (!Number.isInteger(value) || value < 1 ||
+        value > Number($(key).max)) {
+            alert("Enter a valid duration.");
+            return;
+        }
+        durations[key] = value;
+    }
+    setMode(mode);
+    $("status").textContent = "Settings saved";
+};
+
+clock();
+setInterval(clock, 1000);
+render();
