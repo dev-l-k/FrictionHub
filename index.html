@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrictionHub</title>
+    <meta name="theme-color" content="#101018">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="./icons/icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="./icons/icon-192.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -162,5 +166,14 @@
         FrictionHub - For a Smooth Digital Life
     </footer>
     <script src="script.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./service-worker.js")
+                .catch(error => console.error("Service worker registration failed:", error));
+            });
+        }
+
+    </script>
 </body>
 </html>
