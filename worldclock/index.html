@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .controls{
+            display:flex;
+            gap:10px;
+            margin:25px 0;
+            flex-wrap: wrap;
+        }
+        input,select{
+            padding:12px;
+            background:#333;
+            color:whitesmoke;
+            border-radius: 10px;
+            border:1px solid grey;
+            min-width: 0;
+        }
+        input{
+            flex:1;
+
+        }
+        .clock-grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+            gap:16px;
+        }
+        .clock-card{
+            background:#222;
+            border:1px solid #111;
+            border-radius: 12px;
+            padding: 20px;
+
+        }
+        .clock-card h3{
+            margin:0 0 8px;
+        }
+        .time-display{
+            font-size: 30px;
+            font-weight: 700;
+            margin:15px;
+            color:whitesmoke;
+            font-variant-numeric: tabular-nums;
+        }
+        .date{
+            font-size:14px;
+
+        }
+        .remove{
+            float:right;
+            background:transparent;
+            border:1px solid #111;
+            border-radius:8px;
+            padding: 5px 9px;
+            cursor: pointer;
+        }
+        @media(max-width:500px){
+            .time-display{
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="
+        ../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="headerTime"></div>
+        </header>
+        <main><h1>World Clock</h1>
+        <p>Check the current time in cities</p>
+        <div class="controls">
+            <input type="search" id="search" list="cities" placeholder="Search by a name or enter a city">
+            <datalist id="cities"></datalist>
+            <button class="btn-primary" onclick="addCity()">Add city</button>
+            <select id="format" aria-label="Time format">
+            <option value="24">24-hour</option>
+            <option value="12">12-hour</option>
+            </select>
+
+        </div>
+        <div class="clock-grid" id="clocks"></div>
+    </main>
+        <script src="script.js"></script>
+</body>
+</html>
