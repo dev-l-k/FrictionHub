@@ -63,7 +63,7 @@ function removeCity(index){
 function render(){
     $("clocks").innerHTML = selected.map((c,i)=>`
     <div class="clock-card">
-    <button class="remove" onclick="removedCity(${i})" aria-label="Remove ${esc(c.name)}">×</button>
+    <button class="remove" onclick="removeCity(${i})" aria-label="Remove ${esc(c.name)}">×</button>
     <h3>${esc(c.name)}</h3>
     <div class="time-display" id="time${i}">--:--:--</div>
     <p class="date" id="date${i}">--</p>
