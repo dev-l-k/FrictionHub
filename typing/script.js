@@ -52,15 +52,16 @@ function startTimer(){
 function updateStats(){
     const typed = input.value;
     let correct = 0;
-    [...tuped].forEach((char,i) => {
+    [...typed].forEach((char,i) => {
         if(char===passage[i]) correct++
     });
     const elapsed = Number(document.getElementById("duration").value)-remaining;
     const minutes = Math.max(elapsed/60,1/60);
     const wpm = Math.round((correct/5)/minutes);
     const accuracy = typed.length?Math.round((correct/typed.length)*100):100;
+    document.getElementById("accuracy").textContent = `${accuracy}%`;
     document.getElementById("wpm").textContent=wpm;
-    [...quote.children].forEach((span,1)=>{
+    [...quote.children].forEach((span,i)=>{
         span.className="";
         if(i<typed.length){
             span.classList.add(typed[i]===passage[i]?"correct":"wrong");
@@ -68,7 +69,32 @@ function updateStats(){
         }else if(i===typed.length){
             span.classList.add("current");
         }
-    })!
+    });
     if(typed.length>=passage.length)endGame();
 
 }
+
+function endGame(){
+    if(finished)return;
+    finished=true;
+    clearInterval(timer);
+    input.disabled=true;
+    document.getElementById("message").textContent="Nice work";
+    const finalWpm= Number(document.getElementById("wpm").textContent);
+    bestWpm= Math.max(bestWpm,finalWpm);
+    document.getElementById("result").hidden=false;
+    document.getElementById("finalStats").textContent=`Speed: ${finalWpm} WPM • Accuracy: ${document.getElementById("accuracy").textContent} • Best: ${bestWpm}`;
+}
+input.addEventListener("input", () => {
+    if (finished) return;
+    if (!started && input.value.length) startTimer();
+    updateStats();
+});
+updateTime();
+setInterval(updateTime,1000);
+function updateTime(){
+    const clock = document.getElementById('time');
+    const time = new Date().toLocaleTimeString();
+    clock.textContent = time;
+}
+resetGame();
