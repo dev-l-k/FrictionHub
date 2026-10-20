@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .typing-wrap{
+            max-width: 850px;
+            margin:30px auto;
+            padding:0 16px;
+
+        }
+        .challenge{
+            background: #222;
+            border:1px solid #666;
+            border-radius: 14px;
+            padding:24px;
+        }
+        .stats{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+        .stat{
+            background:#222;
+            padding:16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .stat strong{
+            display: block;
+            font-size: 26px;
+        }
+        .stat span{
+            font-weight: 13px;
+        }
+        .quote{
+            font-size: 19px;
+            line-height: 1.9;
+            margin:20px 0;
+            overflow-wrap: anywhere;
+        }
+        .quote span.correct{
+            color:#72dfa1;
+
+        }
+        span.wrong{
+            color:rosybrown;
+            background: #ff6262;
+            border-radius: 3px;
+        }
+        .quote span.current{
+            border-bottom: 2px solid #222;
+            
+        }
+        #typingInput{
+            width:100%;
+            min-height: 130px ;
+            resize: vertical;
+            background:#444;
+            color:antiquewhite;
+            border: 1px solid #999;
+            border-radius: 12px;
+            padding:14px;
+            font: 16px/1.7 monospace;
+            outline:none;
+
+        }
+        #typingInput:focus{
+            border-color: #333;
+
+        }
+        .controls{
+            display:flex;
+            gap:10px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .controls select{
+            background:#333;
+            color:white;
+            border: 1px solid #666;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .result{
+            text-align: center;
+            padding:20px 0;
+
+        }
+        .result h2{
+            color: lemonchiffon;
+
+        }
+        .muted{
+            font-size: 14px;
+            
+        }
+        @media(max-width:520px){
+            .challenge{
+                padding:16px;
+            }
+            .quote{
+                font-size:17px;
+            }
+            .stat strong{
+                font-size:22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main>
+        <h1>Typing Challenge</h1>
+        <p style="margin-bottom: 10px;">Test your speed, improve your accuracy in typing.</p>
+        <div class="card">
+            <div class="controls">
+                <label for="duration">Duration: </label>
+                <select id="duration" onchange="resetGame()">
+                    <option value="15">15</option>
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+
+                </select>
+                <button class="btn-primary" onclick="resetGame()">Restart</button>
+            </div>
+            <div class="stats">
+                <div class="stat"><strong id="timeLeft">30</strong><span> Seconds left</span></div>
+                <div class="stat"><strong id="wpm">0</strong><span>WPM</span></div>
+                <div class="stat"><strong id="accuracy">100%</strong><span>Accuracy</span></div>
+            </div>
+
+            <div id="quote"></div>
+            <textarea id="typingInput" placeholder="Start typing here...." spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+            <p id="message">The timer starts when you type your first character.</p>
+            <div id="result" class="result" hidden>
+                <h2>Challenge Complete</h2>
+                <p id="finalStats"></p>
+                <button class="btn-primary" onclick="resetGame()">Try Again</button>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        Typing Speed tester - FrictionHub
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
