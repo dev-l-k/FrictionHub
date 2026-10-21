@@ -45,6 +45,12 @@ Uses Dictionary api to get meaning and other information about words ir phrases
 Focus,take break and acheive your gols through pomodaro timer.
 - CSS Gradient Generator 
 Make CSS Gradients by selecting colors only and instantly copy the code
+- World Clock 
+Check and analyse the world time and time differnce between zones.
+- Typing speed checker
+Measure your word per minute using this sub app. Typing is a big support to devlopers.
+- Daily Planner
+Helpful to those who dont memorize important things. mark as completed when each plan is done
 
 ## Problem solved
 - CopyBoard
@@ -85,6 +91,14 @@ Uses Dictionary api to get meaning and other information about words ir phrases
 Focus,take break and acheive your gols through pomodaro timer.
 - CSS Gradient Generator 
 Make CSS Gradients by selecting colors only and instantly copy the code
+- World Clock 
+Check and analyse the world time and time differnce between zones.
+- Typing speed checker
+Measure your word per minute using this sub app. Typing is a big support to devlopers.
+- Daily Planner
+Helpful to those who dont memorize important things. mark as completed when each plan is done
+
+
 ---
 - Any of your data entered in this project never leaves your device/browser tab.
 ---
