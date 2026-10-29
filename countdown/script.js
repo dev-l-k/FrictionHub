@@ -1,9 +1,8 @@
-const { useOptimistic } = require("react");
 
 const KEY = 'fh_cd';
 const nameE1= document.getElementById('name');
 const dateE1 = document.getElementById('date');
-const listE1 = document.getAnimations('list');
+const listE1 = document.getElementById('list');
 const emptyE1 = document.getElementById('empty');
 const errE1 = document.getElementById('err');
 let items = JSON.parse(localStorage.getItem(KEY)||'[]');
@@ -45,32 +44,30 @@ nameE1.onkeydown = e=> {
     }
 }
 
-box.classList.remove('done');
-const s = Math.floor(diff/1000);
-const d = Math.floor(s/86400);
-const h = Math.floor((s%86400)/3600);
-const m = Math.floor((s%3600)/60);
-const sec = s%60;
-timeE1.innerHTML = `
-<div class='cd-box'><b>${d}</b><span>days</div>
-<div class='cd-box'><b>${pad(h)}</b><span>hours</div>
-<div class='cd-box'><b>${pad(m)}</b><span>minutes</div>
-<div class='cd-box'><b>${pad(sec)}</b><span>sec</div>
 
-
-
-`
 
 function update(box){
     const target = +box.dataset.target;
     const diff = target - Date.now();
-    const timeE1 = box.querySelector('cd-time');
+    const timeE1 = box.querySelector('.cd-time');
     if(diff<=0){
         box.classList.add('done');
-        timeE1.outerHTML = '<div class"cd-finished">Time is up!</div>';
+        timeE1.outerHTML = '<div class="cd-finished">Time is up!</div>';
         return;
 
     }
+    box.classList.remove('done');
+    const s = Math.floor(diff/1000);
+    const d = Math.floor(s/86400);
+    const h = Math.floor((s%86400)/3600);
+    const m = Math.floor((s%3600)/60);
+    const sec = s%60;
+    timeE1.innerHTML = `
+    <div class='cd-box'><b>${d}</b><span>days</span></div>
+    <div class='cd-box'><b>${pad(h)}</b><span>hours</span></div>
+    <div class='cd-box'><b>${pad(m)}</b><span>minutes</span></div>
+    <div class='cd-box'><b>${pad(sec)}</b><span>sec</span></div>
+    `;
 }
 
 function render(){
@@ -78,7 +75,7 @@ function render(){
     emptyE1.style.display = items.length?'none':'block';
     items.sort((a,b)=>a.target-b.target);
     items.forEach(item => {
-        const box = document.createElement('<div>');
+        const box = document.createElement('div');
         box.className='cd-item';
         box.dataset.target=item.target;
         box.innerHTML=`
