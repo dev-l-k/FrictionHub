@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow and radius</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 260px;
+            padding: 30px;
+            background: #1a1a26;
+            border: 1px solid #333344;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 140px;
+            height: 140px;
+            background: #ffd866;
+        }
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            padding: 20px;
+            background: #1a1a26;
+            border: 1px solid #333344;
+            border-radius: 16px;
+        }
+        .ctrl label{
+            display:flex;
+            justify-content: space-between;
+            color:#a8a8b8;
+            font-size:13px;
+            margin-bottom: 8px;
+
+        }
+        .ctrl label b{
+            color:#ffd866;
+        }
+        .ctrl input[type="range"]{
+            width:100%;
+            accent-color:#ffd866;
+        }
+        .ctrl input[type="color"]{
+            width:100%;
+            height:38px;
+            padding:2px;
+            background:#a1a126;
+            border:1px solid #333344;
+            border-radius:8px;
+            cursor:pointer;
+        }
+        .ctrl input[type="color"] {
+            width: 100%;
+            height: 38px;
+            padding: 2px;
+            background: #1a1a26;
+            border: 1px solid #333344;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .out {
+            margin-top: 20px;
+            padding: 18px;
+            background: #1a1a26;
+            border: 1px solid #333344;
+            border-radius: 16px;
+        }
+        .out label {
+            display: block;
+            color: #a8a8b8;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .out code {
+            display: block;
+            padding: 14px;
+            background: #242435;
+            border-radius: 10px;
+            color: #ffd866;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin-bottom: 12px;
+        }
+        .ok { color: #6ee7a8; font-size: 13px; margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="app-page">
+        <div class="app-header">
+            <h1>Shadow and Readius</h1>
+            <p>Design box shadows and rounded corners visual</p>
+        </div>
+        <div class="preview" style="margin-top: 20px;">
+            <div class="box" id="box"></div>
+
+
+        </div>
+        <div class="controls">
+            <div class="ctrl">
+                <label>X <b id="xLbl">10px</b></label>
+                <input type="range" id="x" min="-50" max="50">
+            </div>
+            <div class="ctrl">
+                <label>Y <b id="yLbl">10px</b></label>
+                <input type="range" id="y" min="-50" max="50" value="10">
+            </div>
+            <div class="ctrl">
+                <label>Blur <b id="blurLbl">20px</b></label>
+                <input type="range" id="blur" min="0" max="100" value="20">
+            </div>
+            <div class="ctrl">
+                <label>Spread <b id="spreadLbl">0px</b></label>
+                <input type="range" id="spread" min="-30" max="30" value="0">
+            </div>
+            <div class="ctrl">
+                <label>Opacity <b id="opacityLbl">0.3</b></label>
+                <input type="range" id="opacity" min="0" max="100" value="30">
+            </div>
+            <div class="ctrl">
+                <label>Color</label>
+                <input type="color" id="color" value="#000000">
+            </div>
+            <div class="ctrl">
+                <label>Radius <b id="radiusLbl">16px</b></label>
+                <input type="range" id="radius" min="0" max="100" value="16">
+            </div>
+        </div>
+
+        <div class="out">
+            <label>Generated CSS</label>
+            <code id="css"></code>
+            <div class="button-row">
+                <button class="btn-primary" id="copy">Copy CSS</button>
+                <button class="btn-danger btn-small" onclick="reset()">Reset</button>
+                <span class="ok" id="ok"></span>
+            </div>
+        </div>
+    </main>
+
+    <footer>FrictionHub - For a Smooth Digital Life</footer>
+    <script src="script.js"></script>
+</body>
+</html>
