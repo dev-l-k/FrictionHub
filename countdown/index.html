@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+        .cd-form{
+            display:flex;
+            flex-direction: column;
+            gap:12px;
+        }
+        .cd-form label{
+            color:#a8a8b8;
+            font-size: 14px;
+            margin-bottom: 6px;
+            display:flex;
+
+        }
+        .cd-item{
+            padding:18px;
+            background:#1a1a26;
+            border:1px solid #222244;
+            border-radius: 14px;
+            margin-bottom: 12px;
+
+        }
+        .cd-item.done{
+            border-color: #ffd866;
+
+        }
+        .cd-top{
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+            gap:10px;
+            margin-bottom: 14px;
+        }
+        .cd-top h3{
+            font-size:16px;
+        }
+        .cd-top small{
+            color:#a8a8b8;
+            font-size: 12px;
+
+        }
+        .cd-time{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:8px;
+        }
+        .cd-box{
+            padding:10px 4px;
+            background:#242435;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .cd-box b{
+            display:block;
+            font-size:22px;
+            color:#ffd866;
+
+        }
+        .cd-box span{
+            font-size:10px;
+            color: #a8a8b8;
+            text-transform: uppercase;
+        }
+        .cd-finished{
+            text-align: center;
+            padding:14px;
+            color: #ffd866;
+            font-weight:bold;
+        }
+        @media(max-width:500px){
+            .cd-time{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="app-page">
+        <div class="app-header">
+            <h1>Countdown Timer</h1>
+            <p>Track how much time is left for an event to occur</p>
+
+        </div>
+        <div class="card" style="margin-top:20px;">
+            <div class="cd-form">
+                <div>
+                    <label>Event Name</label>
+                    <input type="text" id="name" placeholder="New Year" maxlength="50">
+                </div>
+                <div>
+                    <label>Date and Time</label>
+                    <input type="datetime-local" id="date">
+
+                </div>
+                <div class="button-row">
+                    <button class="btn-primary" id="add" onclick="add()">Add</button>
+
+                </div>
+                <div id="err" style="color:rosybrown;font-size:14px;display:none;"></div>
+            </div>
+        </div>
+        <div id="list" style="margin-top: 24px;"></div>
+        <div class="empty" id="empty" style="display: none;">Nothing here yet.</div>
+    </main>
+    <footer>
+        FrictionHub - For a smooth Digital life.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
