@@ -6,7 +6,49 @@
     <title>Roman numerals</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .box-col {
+            padding: 18px;
+            background: #1a1a26;
+            border: 1px solid #333344;
+            border-radius: 14px;
+        }
+        .box-col label {
+            display: block;
+            color: #a8a8b8;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        .result {
+            margin-top: 12px;
+            padding: 14px;
+            background: #242435;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffd866;
+            min-height: 26px;
+            word-break: break-word;
+            font-family: Consolas, monospace;
+            letter-spacing: 1px;
+        }
+        .hint {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #777788;
+            min-height: 16px;
+        }
+        .hint.err {
+            color: #ff6262;
+        }
+        @media (max-width: 600px) {
+            .two-col { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -24,14 +66,14 @@
                 <div class="box-col">
                     <label>Number to Roman</label>
                     <input type="text" id="numInput" placeholder="2026" inputmode="numeric">
-                    <div class="result" id="numResult">---</div>
+                    <div class="result" id="numResult">----</div>
                     <div class="hint" id="numHit">Enter a number from 1 to 3999</div>
 
                 </div>
                 <div class="box-col">
                     <label>Roman to Number</label>
                     <input type="text" id="romanInput" placeholder="MMXXVI">
-                    <div class="result" id="romanResult">---</div>
+                    <div class="result" id="romanResult">----</div>
                     <div class="hint" id="romanHint">Use I,V,X,L,C,D,M</div>
                 </div>
             </div>

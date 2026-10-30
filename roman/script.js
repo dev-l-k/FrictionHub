@@ -108,7 +108,7 @@ numIn.oninput = function(){
 romanIn.oninput=function(){
     let val = romanIn.value.trim();
     romanIn.value = val.toUpperCase();
-    val = romIn.value;
+    val = romanIn.value;
     if (val===""){
         romOut.innerHTML="----";
         noteRom("Use I,V,L,C,D,M",false);
