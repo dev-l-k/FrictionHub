@@ -51,6 +51,11 @@ Check and analyse the world time and time differnce between zones.
 Measure your word per minute using this sub app. Typing is a big support to devlopers.
 - Daily Planner
 Helpful to those who dont memorize important things. mark as completed when each plan is done
+- CSS box shadow maker
+Make box shadows in css by using some sliders.
+- Count down
+make some count downs for important events.
+
 
 ## Problem solved
 - CopyBoard

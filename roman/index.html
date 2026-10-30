@@ -5,8 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roman numerals</title>
     <link rel="stylesheet" href="../style.css">
+    <style>
+
+    </style>
 </head>
 <body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="app-page">
+        <div class="app-header">
+            <h1>Roman Numerals</h1>
+            <p>Convert Roman numerals to numbers and back</p>
+        </div>
+        <div class="card">
+            <div class="two-col" style="margin-top:20px;">
+                <div class="box-col">
+                    <label>Number to Roman</label>
+                    <input type="text" id="numInput" placeholder="2026" inputmode="numeric">
+                    <div class="result" id="numResult">---</div>
+                    <div class="hint" id="numHit">Enter a number from 1 to 3999</div>
+
+                </div>
+                <div class="box-col">
+                    <label>Roman to Number</label>
+                    <input type="text" id="romanInput" placeholder="MMXXVI">
+                    <div class="result" id="romanResult">---</div>
+                    <div class="hint" id="romanHint">Use I,V,X,L,C,D,M</div>
+                </div>
+            </div>
+            <div class="button-row">
+                <button class="btn-primary" onclick="copy()">Copy Result</button>
+                <button class="btn-danger" onclick="clear();">Clear</button>
+                <span class="hint" id="copyMsg" style="align-self:center;"></span>
+            </div>
+        </div>
+
     
+    </main>
+    <footer>
+        FrictionHub - For a smooth digital life.
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
