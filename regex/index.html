@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .flags{
+            display:flex;
+            gap:16px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+
+        }
+        .flags label{
+            display:flex;
+            align-items:center;
+            gap:6px;
+            color:#a8a8b8;
+            font-size:14px;
+            cursor: pointer;
+        }
+        .flags input{
+            width:auto;
+            margin:0;
+        }
+        .out{
+            margin-top:16px;
+            padding:18px;
+            background:#1a1a26;
+            border:1px solid #333344;
+            border-radius:14px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.7;
+            white-space:pre-wrap;
+            min-height: 80px;
+        }
+        .match{
+            background-color: #ffd866;
+            color:#171710;
+            border-radius: 3px;
+            padding:1px 2px;
+
+        }
+        .match.odd{
+            background:#6ee7a8;
+        }
+        .err{
+            color:#ff6262;
+        }
+        .status{
+            margin-top:10px;
+            font-size:13px;
+            color:#a8a8b8;
+        }
+        .groups{
+            margin-top:16px;
+            padding:16px;
+            background:#1a1a2b;
+            border:1px solid #333344;
+            border-radius: 14px;
+            display:none;
+        }
+        .groups h3{
+            font-size: 14px;
+            margin-bottom: 10px;
+            color:#a8a8b8;
+
+        }
+        .grow{
+            padding:6px 0;
+            font-family:monospace;
+            font-size:13px;
+        }
+        .grow b {
+            color:#ffd866;
+            display:inline-block;
+            min-width:40px;
+        }
+        .grow.none{
+            color:#777788;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="app-page">
+        <div class="app-header">
+            <h1>Regex Tester</h1>
+            <p>Write a pattern, see matches live</p>
+        </div>
+        <div class="card">
+            <div class="app-group">
+                <label>Pattern</label>
+                <input type="text" id="pattern" placeholder="/d+" autocomplete="off">
+
+            </div>
+            <div class="flags">
+                <label><input type="checkbox" id="flagG" checked>g</label>
+                <label><input type="checkbox" id="flagI">i</label>
+                <label><input type="checkbox" id="flagM">m</label>
+                <label><input type="checkbox" id="flagS">s</label>
+            </div>
+            <div class="app-group" style="margin-top: 16px;">
+                <label>Test String</label>
+                <textarea id="testText" placeholder="Paste text here"></textarea>
+            </div>
+            <div class="status" id="status">Waiting for a pattern...</div>
+            <div class="out" id="out"></div>
+            <div class="groups" id="groupsBox">
+                <h3>Capture groups(first match)</h3>
+                <div id="groupList"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        FrictionHub - For a smooth digital life
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
