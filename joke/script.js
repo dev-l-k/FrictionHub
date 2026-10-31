@@ -3,14 +3,14 @@ let okMsg = document.getElementById("okMsg");
 let currentJoke="";
 function getJoke(){
     joke.className = "joke loading";
-    joke.innerHTML="Loading..."
+    joke.innerHTML="Loading...";
     fetch("https://icanhazdadjoke.com/",{
         headers:{
             "Accept": "application/json",
             "User-Agent": "FructionHub"
         }
     }).then(function(res){
-        return res.json
+        return res.json();
     }).then(function(data){
         currentJoke = data.joke;
         joke.innerHTML=currentJoke;
