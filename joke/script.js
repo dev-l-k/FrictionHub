@@ -4,19 +4,19 @@ let currentJoke="";
 function getJoke(){
     joke.className = "joke loading";
     joke.innerHTML="Loading..."
-    fetch("https://icanhazdadjokes.com/",{
+    fetch("https://icanhazdadjoke.com/",{
         headers:{
             "Accept": "application/json",
             "User-Agent": "FructionHub"
         }
     }).then(function(res){
-        return resetAll.json
+        return res.json
     }).then(function(data){
         currentJoke = data.joke;
         joke.innerHTML=currentJoke;
         joke.className="joke";
     }).catch(function () {
-        jokeBox.className = "joke-box loading";
+        jokeBox.className = "joke loading";
         jokeBox.innerHTML = "Couldn't load a joke. Check your connection.";
     });
 }
