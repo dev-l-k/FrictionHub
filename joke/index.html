@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .joke{
+            min-height:160px;
+            padding:24px;
+            background:#1a1a26;
+            border: 1px solid #333344;
+            border-radius: 16px;;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-align: center;
+            font-size:18px;
+            line-height: 1.6;
+            color:white;
+            margin-top:20px;
+        }
+        .joke.loading{
+            color:#777788;
+            font-size: 14px;
+        }
+        .btn-row{
+            display:flex;
+            gap:10px;
+            flex-wrap:wrap;
+            margin-top: 16px;
+            
+        }
+        .msg{
+            color:#6ee7a8;
+            font-size:13px;
+            margin-left:10px;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+
+    <main class="app-page">
+        <div class="app-header">
+            <h1>Jokes</h1>
+            <p>Random Jokes. Set ur mind cool here.</p>
+        </div>
+        <div class="card">
+            <div class="joke loading" id="joke">Tap the btn below to get jokes</div>
+            <button class="btn-primary" onclick="getJoke()">Get Joke</button>
+            <button class="btn_primary" onclick="copyJoke()">Copy</button>
+            <span class="msg" id="okMsg"></span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
