@@ -106,6 +106,16 @@ Helpful to those who dont memorize important things. mark as completed when each
 Make box shadows in css by using some sliders.
 - Count down
 make some count downs for important events.
+- Roman numercal converter
+I hasnt ever seen any kinda converter like this in the internet. to know more about the logic and to make experices in programming i made this
+- Placeholder maker
+Many devlopers often struggle while making website when they dont have image. so they can copy the placeholder url from here.
+- Jokes
+An api based small sub app im which there appears many kinda joke u can laugh.
+- Regex Tester
+The app compiles your pattern and flags into a RegExp object. Which is built in JS.It runs re.exec(text) in a loop to identify and collect every match.It wraps each match in a coloured elment and renders the result.
+- Numbers to word converter
+here u can input any kinda number and the sub app will output the word form.
 
 
 ---

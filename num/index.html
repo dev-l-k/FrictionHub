@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to word</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .out-box{
+            margin-top:16px;
+            padding:20px;
+            background: #1a1a26;
+            border:1px solid #334;
+            border-radius:14px;
+            min-height:80px;
+            font-size:18px;
+            line-height: 1.6;
+            color:#fff;
+        }
+        .out-box .empty{
+            color:#777788;
+
+        }
+        .err{
+            color:#ff6262;
+        }
+        .mode-row{
+            display:flex;
+            gap:20px;
+            margin-top: 12px;
+            
+        }
+        .mode-row label{
+            display:flex;
+            align-items:center;
+            gap:6px;
+            color:#a8a8b8;
+            cursor:pointer;
+        }
+        .mode-row input {
+            width: auto;
+            margin: 0;
+            accent-color: #ffd866;
+        }
+        .good {
+            color: #6ee7a8;
+            font-size: 13px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="../" class="logo">Friction<span>Hub</span></a>
+        <div class="time" id="time">00:00:00</div>
+    </header>
+    <main class="app-page">
+        <div class="app-header">
+            <h1>Numbers to words</h1>
+            <p>Turn numbers into plain</p>
+        </div>
+        <div class="card">
+            <div class="app-group">
+                <label>Enter a number</label>
+                <input type="number" id="num" placeholder="1234.50" oninput="convert()" autocomplete="off">
+            </div>
+            <div class="mode-row">
+                <label><input type="radio" name="mode" value="indian" checked>Indian(lakh,crore)</label>
+                <label><input type="radio" name="mode" value="west">Western (million , billion)</label>
+            </div>
+            <div class="out-box" id="out"><span class="empty">Your result will appear here</span></div>
+            <div class="button-row" style="margin-top: 16px;">
+                <button class="btn-primary" onclick="copyResult()">Copy</button>
+                <button class="btn-danger" onclick="clearAll()">Clear</button>
+                <span class="good" id="okMsg"></span>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        FrictionHub - For a smooth digital life.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
