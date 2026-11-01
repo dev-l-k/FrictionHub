@@ -56,9 +56,11 @@ function toIndian(n){
 function toWestern(n){
     if(n===0){
         return "zero";
-        let units = ["","thousand","million","billion","trillion"];
+        
     }
+
         let parts = [];
+        let units = ["","thousand","million","billion","trillion"];
         let u = 0;
         while(n>0){
             let chunk = n%1000;
@@ -178,4 +180,5 @@ function updateTime(){
 }
 updateTime();
 setInterval(updateTime,1000);
+
 
